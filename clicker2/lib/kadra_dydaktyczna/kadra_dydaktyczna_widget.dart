@@ -15,7 +15,14 @@ class KadraDydaktycznaWidget extends StatefulWidget {
 }
 
 class _KadraDydaktycznaWidgetState extends State<KadraDydaktycznaWidget> {
+  final _unfocusNode = FocusNode();
   final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
+  void dispose() {
+    _unfocusNode.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +48,7 @@ class _KadraDydaktycznaWidgetState extends State<KadraDydaktycznaWidget> {
       ),
       body: SafeArea(
         child: GestureDetector(
-          onTap: () => FocusScope.of(context).unfocus(),
+          onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
           child: Stack(
             children: [
               Align(
@@ -87,10 +94,7 @@ class _KadraDydaktycznaWidgetState extends State<KadraDydaktycznaWidget> {
                         child: Container(
                           width: 335.5,
                           height: 134.5,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
-                          ),
+                          decoration: BoxDecoration(),
                           child: GridView(
                             padding: EdgeInsets.zero,
                             gridDelegate:
@@ -226,8 +230,18 @@ class _KadraDydaktycznaWidgetState extends State<KadraDydaktycznaWidget> {
                                             .primaryText,
                                         size: 30,
                                       ),
-                                      onPressed: () {
-                                        print('IconButton pressed ...');
+                                      onPressed: () async {
+                                        if (FFAppState().Pskoin >= 250) {
+                                          FFAppState().update(() {
+                                            FFAppState().Pskoin =
+                                                FFAppState().Pskoin + -250;
+                                            FFAppState().ectsnasekunde =
+                                                FFAppState().ectsnasekunde +
+                                                    500.0;
+                                            FFAppState().osobywkadrze =
+                                                FFAppState().osobywkadrze + 1;
+                                          });
+                                        }
                                       },
                                     ),
                                   ),
@@ -270,8 +284,21 @@ class _KadraDydaktycznaWidgetState extends State<KadraDydaktycznaWidget> {
                                             .primaryText,
                                         size: 30,
                                       ),
-                                      onPressed: () {
-                                        print('IconButton pressed ...');
+                                      onPressed: () async {
+                                        if (FFAppState().Pskoin >= 650) {
+                                          FFAppState().update(() {
+                                            FFAppState().Pskoin =
+                                                FFAppState().Pskoin + -650;
+                                            FFAppState().ectsnasekunde =
+                                                FFAppState().ectsnasekunde +
+                                                    700.0;
+                                            FFAppState().osobywkadrze =
+                                                FFAppState().osobywkadrze + 1;
+                                            FFAppState().przyrostects =
+                                                FFAppState().przyrostects +
+                                                    200.0;
+                                          });
+                                        }
                                       },
                                     ),
                                   ),
@@ -314,8 +341,21 @@ class _KadraDydaktycznaWidgetState extends State<KadraDydaktycznaWidget> {
                                             .primaryText,
                                         size: 30,
                                       ),
-                                      onPressed: () {
-                                        print('IconButton pressed ...');
+                                      onPressed: () async {
+                                        if (FFAppState().Pskoin >= 700) {
+                                          FFAppState().update(() {
+                                            FFAppState().Pskoin =
+                                                FFAppState().Pskoin + -700;
+                                            FFAppState().ectsnasekunde =
+                                                FFAppState().ectsnasekunde +
+                                                    300.0;
+                                            FFAppState().osobywkadrze =
+                                                FFAppState().osobywkadrze + 1;
+                                            FFAppState().przyrostects =
+                                                FFAppState().przyrostects +
+                                                    600.0;
+                                          });
+                                        }
                                       },
                                     ),
                                   ),
@@ -358,8 +398,18 @@ class _KadraDydaktycznaWidgetState extends State<KadraDydaktycznaWidget> {
                                             .primaryText,
                                         size: 30,
                                       ),
-                                      onPressed: () {
-                                        print('IconButton pressed ...');
+                                      onPressed: () async {
+                                        if (FFAppState().Pskoin >= 1000) {
+                                          FFAppState().update(() {
+                                            FFAppState().Pskoin =
+                                                FFAppState().Pskoin + -1000;
+                                            FFAppState().ectsnasekunde =
+                                                FFAppState().ectsnasekunde +
+                                                    1500.0;
+                                            FFAppState().osobywkadrze =
+                                                FFAppState().osobywkadrze + 1;
+                                          });
+                                        }
                                       },
                                     ),
                                   ),
