@@ -285,6 +285,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               FFAppState().ectsaktualne =
                                   FFAppState().ectsaktualne +
                                       FFAppState().przyrostects;
+                              FFAppState().ectsclicked =
+                                  FFAppState().ectsclicked +
+                                      FFAppState().przyrostects;
                             });
                           },
                           child: Image.asset(
