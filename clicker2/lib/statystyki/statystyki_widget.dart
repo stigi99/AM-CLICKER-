@@ -467,7 +467,7 @@ class _StatystykiWidgetState extends State<StatystykiWidget> {
                             builder: (alertDialogContext) {
                               return AlertDialog(
                                 title: Text('Powiadomienie'),
-                                content: Text('Udało się wysłać  wynik'),
+                                content: Text('Udało wysłać się wynik'),
                                 actions: [
                                   TextButton(
                                     onPressed: () =>
@@ -484,7 +484,7 @@ class _StatystykiWidgetState extends State<StatystykiWidget> {
                             builder: (alertDialogContext) {
                               return AlertDialog(
                                 title: Text('Powiadomienie'),
-                                content: Text('Nie udało się wysłać  wyniku'),
+                                content: Text('Nie udało wysłać się wyniku'),
                                 actions: [
                                   TextButton(
                                     onPressed: () =>
